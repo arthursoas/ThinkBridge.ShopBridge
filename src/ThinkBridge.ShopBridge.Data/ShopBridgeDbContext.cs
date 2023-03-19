@@ -42,3 +42,4 @@ namespace ThinkBridge.ShopBridge.Data
             base.OnModelCreating(modelBuilder);
         }
     }
+}
