@@ -21,9 +21,10 @@ namespace ThinkBridge.ShopBridge.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> ListItemAsync([FromRoute] int id, CancellationToken cancellationToken)
+        public async Task<ActionResult> GetItemAsync([FromRoute] int id, CancellationToken cancellationToken)
         {
-            return Ok(id);
+            var request = new GetItemRequest { Id = id };
+            return BuildResponse(await Mediator.Send(request, cancellationToken));
         }
 
         [HttpPost]
