@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B2A9894B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkBridge.ShopBridge.Data.Tests", "src\Tests\ThinkBridge.ShopBridge.Data.Tests\ThinkBridge.ShopBridge.Data.Tests.csproj", "{3247F8D4-CB8E-4D4C-8D14-0FC0C5E68FF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkBridge.ShopBridge.Domain.Tests", "src\Tests\ThinkBridge.ShopBridge.Domain.Tests\ThinkBridge.ShopBridge.Domain.Tests.csproj", "{728EB777-3AAC-463C-BA1D-58637F54077D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{3247F8D4-CB8E-4D4C-8D14-0FC0C5E68FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3247F8D4-CB8E-4D4C-8D14-0FC0C5E68FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3247F8D4-CB8E-4D4C-8D14-0FC0C5E68FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728EB777-3AAC-463C-BA1D-58637F54077D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728EB777-3AAC-463C-BA1D-58637F54077D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728EB777-3AAC-463C-BA1D-58637F54077D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728EB777-3AAC-463C-BA1D-58637F54077D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3247F8D4-CB8E-4D4C-8D14-0FC0C5E68FF6} = {B2A9894B-800F-48B3-852E-CEE9F35B03B1}
+		{728EB777-3AAC-463C-BA1D-58637F54077D} = {B2A9894B-800F-48B3-852E-CEE9F35B03B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6E69929-D46E-4958-84A9-2C4CD11BF81D}
