@@ -12,7 +12,7 @@ using ThinkBridge.ShopBridge.Data;
 namespace ThinkBridge.ShopBridge.Data.Migrations
 {
     [DbContext(typeof(ShopBridgeDbContext))]
-    [Migration("20230319194212_InitialMigration")]
+    [Migration("20230319201735_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -25,13 +25,16 @@ namespace ThinkBridge.ShopBridge.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence("EntityFrameworkHiLoSequence")
+                .IncrementsBy(10);
+
             modelBuilder.Entity("ThinkBridge.ShopBridge.Domain.Entities.Item", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseHiLo(b.Property<int>("Id"), "EntityFrameworkHiLoSequence");
 
                     b.Property<DateTimeOffset>("CreateDate")
                         .HasColumnType("datetimeoffset");

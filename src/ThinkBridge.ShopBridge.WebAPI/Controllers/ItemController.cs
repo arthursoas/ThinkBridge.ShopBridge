@@ -29,7 +29,7 @@ namespace ThinkBridge.ShopBridge.WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateItemAsync([FromBody] CreateItemRequest request, CancellationToken cancellationToken)
         {
-            return Ok();
+            return BuildResponse(await Mediator.Send(request, cancellationToken));
         }
 
         [HttpPut("{id}")]

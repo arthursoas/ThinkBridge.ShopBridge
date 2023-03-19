@@ -7,7 +7,6 @@ namespace ThinkBridge.ShopBridge.Domain.Entities
         /// <summary>
         /// Entity id
         /// </summary>
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         /// <summary>

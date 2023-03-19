@@ -12,6 +12,10 @@ namespace ThinkBridge.ShopBridge.Data.Mapping
             builder.HasKey(i => i.Id);
 
             builder
+                .Property(i => i.Id)
+                .UseHiLo();
+
+            builder
                 .Property(i => i.Name)
                 .IsRequired()
                 .HasColumnType("varchar(250)");

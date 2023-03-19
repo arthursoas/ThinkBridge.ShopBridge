@@ -9,7 +9,8 @@ namespace ThinkBridge.ShopBridge.Domain.Validations.Item
         {
             RuleFor(i => i.Name)
                 .NotEmpty()
-                .NotNull();
+                .NotNull()
+                .MaximumLength(250);
 
             RuleFor(i => i.Description)
                 .NotEmpty()
