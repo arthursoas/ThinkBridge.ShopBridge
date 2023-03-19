@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using ThinkBridge.ShopBridge.Domain.Responses;
+using ItemEntity = ThinkBridge.ShopBridge.Domain.Entities.Item;
 
 namespace ThinkBridge.ShopBridge.Domain.Requests.Item
 {
@@ -25,5 +26,20 @@ namespace ThinkBridge.ShopBridge.Domain.Requests.Item
         /// </summary>
         /// <returns>Validation result</returns>
         public override abstract ValidationResult Validate();
+
+        /// <summary>
+        /// Convert a <see cref="CreateUpdateItemRequest"/> to an <see cref="ItemEntity"/>
+        /// </summary>
+        /// <param name="request">Create or update item request</param>
+        /// <returns>Item</returns>
+        public ItemEntity ToItem()
+        {
+            return new ItemEntity
+            {
+                Name = Name,
+                Description = Description,
+                Price = Price
+            };
+        }
     }
 }

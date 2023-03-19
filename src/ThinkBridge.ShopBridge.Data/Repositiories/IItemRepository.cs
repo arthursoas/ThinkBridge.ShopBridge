@@ -11,5 +11,20 @@ namespace ThinkBridge.ShopBridge.Data.Repositiories
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>Added item</returns>
         Task<Item> AddItemAsync(Item item, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Get an item from id
+        /// </summary>
+        /// <param name="id">Item id</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Item or null</returns>
+        Task<Item?> GetItemAsync(int id, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Update an item on the database
+        /// </summary>
+        /// <param name="item">Item to b updated</param>
+        /// <returns>Updated item</returns>
+        Item UpdateItem(Item item);
     }
 }

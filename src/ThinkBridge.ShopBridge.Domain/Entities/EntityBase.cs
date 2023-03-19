@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace ThinkBridge.ShopBridge.Domain.Entities
+﻿namespace ThinkBridge.ShopBridge.Domain.Entities
 {
     public abstract class EntityBase
     {

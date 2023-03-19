@@ -7,14 +7,19 @@ namespace ThinkBridge.ShopBridge.Domain.Validations.Item
     {
         public UpdateItemRequestValidation()
         {
+            RuleFor(i => i.Id)
+                .NotNull();
+
             RuleFor(i => i.Name)
-                .NotEmpty();
+                .NotEmpty()
+                .When(i => i.Name != null);
 
             RuleFor(i => i.Description)
-                .NotEmpty();
+                .NotEmpty()
+                .When(i => i.Description != null);
 
             RuleFor(i => i.Price)
-                .GreaterThan(0);
+                .GreaterThanOrEqualTo(0);
         }
     }
 }

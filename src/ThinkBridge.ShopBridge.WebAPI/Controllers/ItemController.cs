@@ -33,9 +33,10 @@ namespace ThinkBridge.ShopBridge.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateItemAsync([FromRoute] int id, [FromBody] CreateItemRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult> UpdateItemAsync([FromRoute] int id, [FromBody] UpdateItemRequest request, CancellationToken cancellationToken)
         {
-            return Ok(id);
+            request.Id = id;
+            return BuildResponse(await Mediator.Send(request, cancellationToken));
         }
     }
 }
