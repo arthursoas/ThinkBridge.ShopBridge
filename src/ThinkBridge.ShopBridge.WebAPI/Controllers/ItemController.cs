@@ -15,9 +15,10 @@ namespace ThinkBridge.ShopBridge.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> ListItemsAsync([FromQuery] GetItemsRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult> ListItemsAsync(CancellationToken cancellationToken)
         {
-            return Ok();
+            var request = new GetItemsRequest();
+            return BuildResponse(await Mediator.Send(request, cancellationToken));
         }
 
         [HttpGet("{id}")]

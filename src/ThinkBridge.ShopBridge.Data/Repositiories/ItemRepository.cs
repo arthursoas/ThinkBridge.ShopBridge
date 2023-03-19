@@ -27,5 +27,10 @@ namespace ThinkBridge.ShopBridge.Data.Repositiories
 
             return item;
         }
+
+        public async Task<ICollection<Item>> SelectItemsAsync(CancellationToken cancellationToken)
+        {
+            return await DbSet.ToListAsync(cancellationToken);
+        }
     }
 }

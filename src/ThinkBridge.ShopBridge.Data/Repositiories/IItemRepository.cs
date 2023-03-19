@@ -13,7 +13,7 @@ namespace ThinkBridge.ShopBridge.Data.Repositiories
         Task<Item> AddItemAsync(Item item, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Get an item from id
+        /// Get an item by id from database
         /// </summary>
         /// <param name="id">Item id</param>
         /// <param name="cancellationToken">Cancellation token</param>
@@ -26,5 +26,12 @@ namespace ThinkBridge.ShopBridge.Data.Repositiories
         /// <param name="item">Item to b updated</param>
         /// <returns>Updated item</returns>
         Item UpdateItem(Item item);
+
+        /// <summary>
+        /// Select all items from database
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>Items</returns>
+        Task<ICollection<Item>> SelectItemsAsync(CancellationToken cancellationToken);
     }
 }
