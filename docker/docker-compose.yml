@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  shopbridge-web-api:
+    container_name: shopbridge
+    image: shopbridge-web-api
+    build:
+      context: ../
+      dockerfile: ./src/ThinkBridge.ShopBridge.WebAPI/Dockerfile
+    ports:
+      - "5000:80"
+      - "5111:443"
