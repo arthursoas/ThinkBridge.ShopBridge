@@ -2,7 +2,7 @@
 
 This project is a web API built 100% using .NET 6.0.
 
-The API was made considering the specifications availabe on Case Study For Backend Developers
+The API was made considering the specifications availabe on Case Study For Backend Developers from [ThinkBridge](https://thinkbridge.com/).
 
 ---
 
