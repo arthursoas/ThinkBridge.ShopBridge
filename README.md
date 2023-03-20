@@ -1,4 +1,4 @@
-# 🪙 ShopBridge Web API
+# 🎁 ShopBridge Web API
 
 This project is a web API built 100% using .NET 6.0.
 
